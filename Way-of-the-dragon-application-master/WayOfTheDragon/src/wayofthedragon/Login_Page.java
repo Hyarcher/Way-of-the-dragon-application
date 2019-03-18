@@ -37,6 +37,11 @@ public class Login_Page extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Login_Btn.setText("Log In");
+        Login_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Login_BtnActionPerformed(evt);
+            }
+        });
 
         Create_Btn.setText("Create Account");
         Create_Btn.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +112,11 @@ public class Login_Page extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void Login_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_BtnActionPerformed
+        Calendar_View viewCalendar = new Calendar_View();
+        viewCalendar.setVisible(true);
+    }//GEN-LAST:event_Login_BtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -74,6 +74,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Log In"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Login_BtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Create_Btn">
       <Properties>

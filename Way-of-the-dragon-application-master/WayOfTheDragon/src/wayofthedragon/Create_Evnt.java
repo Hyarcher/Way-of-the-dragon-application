@@ -9,7 +9,7 @@ package wayofthedragon;
  *
  * @author up862985
  */
-import 
+
 public class Create_Evnt extends javax.swing.JFrame {
 
     /**
