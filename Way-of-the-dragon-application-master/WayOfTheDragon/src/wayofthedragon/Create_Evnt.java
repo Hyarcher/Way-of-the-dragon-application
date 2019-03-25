@@ -9,7 +9,7 @@ package wayofthedragon;
  *
  * @author up862985
  */
-
+import java.util.Scanner;
 public class Create_Evnt extends javax.swing.JFrame {
 
     /**
@@ -90,6 +90,12 @@ public class Create_Evnt extends javax.swing.JFrame {
         jComboBox3.setToolTipText("");
 
         jLabel7.setText("Event Description");
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("SAVE AND EXIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -213,7 +219,11 @@ public class Create_Evnt extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
+        Scanner user_input = new Scanner( System.in );
+        String Event_Name;
+        System.out.print("Enter your Event Name");
+        Event_Name = user_input.next();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -226,7 +236,25 @@ public class Create_Evnt extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+        JTextField4 myTextField = new JTextField4("Enter event description");
+        //validation on the input if you only want numbers
+        //get The Text and parse it as a double
+        double EventDescription;
+        EventDescription = Double.parseDouble(myTextField.getText());
+        
+        
+        
+        
+        
+        
+                
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,22 +272,16 @@ public class Create_Evnt extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Create_Evnt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Create_Evnt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Create_Evnt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Create_Evnt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Create_Evnt().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Create_Evnt().setVisible(true);
         });
     }
 
@@ -285,4 +307,14 @@ public class Create_Evnt extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
+
+    private static class JTextField4 {
+
+        public JTextField4(String enter_event_description) {
+        }
+
+        private String getText() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
 }
